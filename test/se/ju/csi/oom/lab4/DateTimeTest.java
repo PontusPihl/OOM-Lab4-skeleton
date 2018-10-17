@@ -15,7 +15,7 @@ public class DateTimeTest {
 	public void testToString() 
 	{
 		DateTime dateTime=new DateTime(2018, 12, 24, 16, 30,30);		
-		assertEquals("2018-12-24 16:30:30", dateTime.toString());
+		assertEquals("2018-12-24 16:30", dateTime.toString());
 		
 		dateTime=new DateTime(666, 1, 1, 5, 5,5);		
 		assertEquals("0666-01-01 05:05:05", dateTime.toString());
@@ -24,11 +24,10 @@ public class DateTimeTest {
 	@Test
 	public void testDateTimeString()
 	{
-		String rawString="2018-12-24 16:30:30";
-		DateTime dateTime=new DateTime(rawString);		
-		assertEquals(rawString, dateTime.toString());
+		DateTime dateTime=new DateTime("2018-12-24 16:30:30");		
+		assertEquals("2018-12-24 16:30", dateTime.toString());
 
 		dateTime=new DateTime("0666-01-01 05:05:05");		
-		assertEquals("0666-01-01 05:05:05", dateTime.toString());
+		assertEquals("0666-01-01 05:05", dateTime.toString());
 	}
 }

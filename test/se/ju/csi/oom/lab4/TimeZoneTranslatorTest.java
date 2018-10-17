@@ -16,7 +16,7 @@ public class TimeZoneTranslatorTest {
 	public void checkDateTime(int expectedYear,int expectedMonth,int expectedDay,
 			int expectedHour,int expectedMinute,int expectedSecond,DateTime dateTime)
 	{
-		String expectedString = String.format("%04d-%02d-%02d %02d:%02d:%02d", 
+		String expectedString = String.format("%04d-%02d-%02d %02d:%02d", 
 				expectedYear, expectedMonth, expectedDay, expectedHour, expectedMinute, expectedSecond);		
 		
 		assertEquals(expectedString, dateTime.toString());
